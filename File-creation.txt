@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('create folder') {
+            steps {
+                sh 'mkdir -p devops'
+            }
+        }
+        stage('Bye') {
+            steps {
+                echo 'Good Bye'
+            }
+        }
+    }
+}
